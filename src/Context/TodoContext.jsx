@@ -36,16 +36,16 @@ export const TodoContextProvider = ({children})=>{
 
 const[taskedit,settaskedit] = useState(null)
 
-
-
 //------------Update Task--------------///
+
+const [priority,setpriority]=useState('all')
 
 
 // localStorage.clear()
 
     return(
         <TodoContext.Provider
-        value={{Todo,setTodo,deleteTask,taskedit,settaskedit}}
+        value={{Todo,setTodo,deleteTask,taskedit,settaskedit,priority,setpriority}}
         >{children}</TodoContext.Provider>
     )
 
