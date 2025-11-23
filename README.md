@@ -4,7 +4,10 @@ Now I rebuilt the whole UI and functionality in React, and moved everything into
 Right now it's a single-user app that stores data in localStorage, and supports adding, deleting, and updating tasks.
 
 --Current Features
--Add Task
+
+-drag & drop card (realtime ui changes) 
+
+--Add Task
 
 -Form to add a new note/todo
 
