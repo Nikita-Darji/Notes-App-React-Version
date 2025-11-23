@@ -29,7 +29,7 @@ const TaskDashboard = ({openForm}) => {
                 <div className="w-full p-3 h-auto flex gap-6 flex-wrap justify-center">
                     {filteredTask.map((task,index)=>{
                         return(
-                            <TaskCard key={index} task={task} openForm={openForm}/>
+                            <TaskCard key={task.id} index={index} task={task} openForm={openForm}/>
                         )
                     })
                     }

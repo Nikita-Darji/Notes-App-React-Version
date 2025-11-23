@@ -39,13 +39,24 @@ const[taskedit,settaskedit] = useState(null)
 //------------Update Task--------------///
 
 const [priority,setpriority]=useState('all')
+const [dragIndex,setdragIndex]=useState(null)
+
+const handledrop=(dropindex)=>{
+    if(dragIndex===null) return
+
+    const updated= [...Todo]
+    const movedItem =  updated.splice(dragIndex,1)[0]
+    updated.splice(dropindex,0,movedItem)
+    setTodo(updated)
+    setdragIndex(null)
+}
 
 
 // localStorage.clear()
 
     return(
         <TodoContext.Provider
-        value={{Todo,setTodo,deleteTask,taskedit,settaskedit,priority,setpriority}}
+        value={{Todo,setTodo,deleteTask,taskedit,settaskedit,priority,setpriority,dragIndex,setdragIndex,handledrop}}
         >{children}</TodoContext.Provider>
     )
 
